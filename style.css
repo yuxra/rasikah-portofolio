@@ -710,6 +710,7 @@ a {
         flex-direction: column; /* Elemen jadi ke bawah */
         align-items: center; /* Pusatkan elemen */
         text-align: center;
+        padding: 30px 4px;
     }
     
     .exp h2 {
