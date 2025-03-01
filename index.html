@@ -24,7 +24,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-            <div class="nav-underline"></div> 
+        <div class="nav-underline"></div>
         <div class="menu-toggle" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -34,235 +34,269 @@
 </header>
 
 <body id="home">
-    <div class="background-blur1"></div>
-    <!-- <div id="home"> -->
 
-    <!-- Bagian 1: Data Singkat Diri -->
-    <div id="profile">
-        <div class="profile-info">
-            <p class="little-text">Hello, I'm</p>
-            <h1>Rasikah Rizqia <br>Hariyono</h1>
-            <div class="text">
-                <div class="text-slide">
-                    <p>Web Developer</p>
-                    <p>Android Developer</p>
-                    <p>Video Editor</p>
-                    <p>Student</p>
-                    <p class="clone">Web Developer</p>
+    <section id="loadingScreen" class="loading-screen">
+        <div class="loader-container">
+            <div class="flower" id="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
+            <div class="progress-bar">
+                <span id="progress"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Konten utama -->
+    <div id="mainContent" style="opacity: 0;">
+
+        <div class="background-blur1"></div>
+        <!-- <div id="home"> -->
+
+        <!-- Bagian 1: Data Singkat Diri -->
+        <div id="profile">
+            <div class="profile-info">
+                <p class="little-text">Hello, I'm</p>
+                <h1>Rasikah Rizqia <br>Hariyono</h1>
+                <div class="text">
+                    <div class="text-slide">
+                        <p>Web Developer</p>
+                        <p>Android Developer</p>
+                        <p>Video Editor</p>
+                        <p>Student</p>
+                        <p class="clone">Web Developer</p>
+                    </div>
+                </div>
+
+                <button><a href="assets/CV Rasikah  (2) (1).pdf" download>Download CV</a></button>
+            </div>
+        </div>
+
+
+        <div class="scroll"></div>
+
+        <div id="about-me" class="about-me-comtainer">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <p>Hi, I'm Rasikah Rizqia Hariyono, an Software engineering student from State Vocational
+                    High School 8 Malang. I’m passionate about web and app development, learning both front-end
+                    and back-end technologies. I have experience with programming languages like Java, JavaScript,
+                    and Dart, and frameworks such as Flutter, React, and Bootstrap. I also understand how to
+                    integrate APIs and handle essential web technologies like HTML and CSS.
+                </p>
+                <div class="image">
+                    <div class="bg"></div>
+                    <img src="rasikah.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="background-blur2"></div>
+
+
+        <div id="logo">
+            <!-- SQL -->
+            <img src="icon/mysql-svgrepo-com.svg" alt="SQL" width="50" height="50">
+
+            <!-- JavaScript -->
+            <img src="icon/javascript-16-svgrepo-com.svg" alt="JavaScript" width="50" height="50">
+
+            <!-- Java -->
+            <img src="icon/java-file-svgrepo-com.svg" alt="Java" width="50" height="50">
+
+            <!-- Dart -->
+            <img src="icon/dart-svgrepo-com.svg" alt="Dart" width="50" height="50">
+
+            <!-- Flutter -->
+            <img src="icon/flutter-svgrepo-com.svg" alt="Flutter" width="50" height="50">
+
+            <!-- React -->
+            <img src="icon/react-svgrepo-com.svg" alt="React" width="50" height="50">
+
+            <!-- Bootstrap -->
+            <img src="icon/bootstrap-fill-svgrepo-com.svg" alt="Bootstrap" width="50" height="50">
+
+            <!-- Figma -->
+            <img src="icon/figma-svgrepo-com.svg" alt="Figma" width="50" height="50">
+
+            <!-- Canva -->
+            <img src="icon/canva-svgrepo-com.svg" alt="Canva" width="50" height="50">
+        </div>
+
+
+
+        <div id="project">
+            <h1>My Project</h1>
+            <div id="card">
+                <div class="card">
+                    <img src="img/planti.png" alt="Planti">
+                    <h3>Planti</h3>
+                    <h5>on going</h5>
+                    <p>Built with the React framework, featuring a user-friendly
+                        design, and intended as an online plant marketplace.</p>
+                    <a href="https://homemage.vercel.app/"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/mooncat.png" alt="Mooncat">
+                    <h3>Mooncat</h3>
+                    <h5>finished</h5>
+                    <p>A practice website using Bootstrap, themed around Ruan Mei’s
+                        creations care in the RPG game Honkai Star Rail.</p>
+                    <a href="https://yuxra.github.io/mooncat/"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/to-do.png" alt="List">
+                    <h3>Todo List</h3>
+                    <h5>on going</h5>
+                    <p>A to-do list website using JavaScript, featuring
+                        several user-friendly functionalities.</p>
+                    <a href="https://to-do-app-iota-blond.vercel.app/"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/kopi-kenangan.png" alt="kopi">
+                    <h3>Kopi Kenangan</h3>
+                    <h5>finished</h5>
+                    <p>A innovation of the Kopi Kenangan website using JavaScript, created by Rasikah,
+                        <a href="https://kila-aja.github.io/Portofolio/">Priskila,</a> and <a
+                            href="https://alexandria-laufie.framer.website/">Lovi</a> for the PlayIT web design
+                        competition.
+                    </p>
+                    <a href="https://bundajongho.github.io/kopikenangan-gacor/index.html"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/foxnrock.png" alt="Fox">
+                    <h3>Fox n Rock</h3>
+                    <h5>finished</h5>
+                    <p>A simple game I created using JavaScript, where players must avoid randomly
+                        falling rocks from the sky.</p>
+                    <a href="https://yuxra.github.io/fox-n-rock/"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/cuaca-blimbing.png" alt="Cuaca">
+                    <h3>Malang Weather</h3>
+                    <h5>on going</h5>
+                    <p>A weather forecast website utilizing an API for data, covering the weather
+                        forecast for the Blimbing area, Malang.</p>
+                    <a href="https://yuxra.github.io/cuaca_malang/"><button>view</button></a>
+                </div>
+
+                <div class="card">
+                    <img src="img/clipsy.png" alt="Clipsy">
+                    <h3>Clipsy</h3>
+                    <h5>on going</h5>
+                    <p>A video streaming app project built using the Flutter framework,
+                        inspired by YouTube’s interface.</p>
+                    <!-- <a href="https://clipsy-web-mu.vercel.app/"><button>view</button></a> -->
+                    <a href="assets/Clipsy.apk" download><button>view</button></a>
                 </div>
             </div>
-
-            <button><a href="assets/CV Rasikah  (2) (1).pdf" download>Download CV</a></button>
-        </div>
-    </div>
-<!-- 
-</div> -->
-
-    <div class="scroll"></div>
-
-    <div id="about-me" class="about-me-comtainer">
-        <h1>About Me</h1>
-        <div class="about-content">
-        <p>Hi, I'm Rasikah Rizqia Hariyono, an Software engineering student from State Vocational
-            High School 8 Malang. I’m passionate about web and app development, learning both front-end
-            and back-end technologies. I have experience with programming languages like Java, JavaScript,
-            and Dart, and frameworks such as Flutter, React, and Bootstrap. I also understand how to
-            integrate APIs and handle essential web technologies like HTML and CSS.
-        </p>   
-        <div class="image">
-            <div class="bg"></div> 
-            <img src="rasikah.png" alt="">         
         </div>
 
-        </div>
-    </div>
+        <div id="experience">
+            <h1>Experience</h1>
 
-    <div class="background-blur2"></div>
-
-
-    <div id="logo">
-        <!-- SQL -->
-        <img src="icon/mysql-svgrepo-com.svg" alt="SQL" width="50" height="50" >
-        
-        <!-- JavaScript -->
-        <img src="icon/javascript-16-svgrepo-com.svg" alt="JavaScript" width="50" height="50">
-        
-        <!-- Java -->
-        <img src="icon/java-file-svgrepo-com.svg" alt="Java" width="50" height="50">
-        
-        <!-- Dart -->
-        <img src="icon/dart-svgrepo-com.svg" alt="Dart" width="50" height="50">
-        
-        <!-- Flutter -->
-        <img src="icon/flutter-svgrepo-com.svg" alt="Flutter" width="50" height="50">
-        
-        <!-- React -->
-        <img src="icon/react-svgrepo-com.svg" alt="React" width="50" height="50">
-        
-        <!-- Bootstrap -->
-        <img src="icon/bootstrap-fill-svgrepo-com.svg" alt="Bootstrap" width="50" height="50">
-        
-        <!-- Figma -->
-        <img src="icon/figma-svgrepo-com.svg" alt="Figma" width="50" height="50">
-        
-        <!-- Canva -->
-        <img src="icon/canva-svgrepo-com.svg" alt="Canva" width="50" height="50">
-    </div>
-    
-       
-
-    <div id="project">
-        <h1>My Project</h1>
-        <div id="card">
-            <div class="card">
-                <img src="img/planti.png" alt="Planti">
-                <h3>Planti</h3>
-                <h5>on going</h5>
-                <p>Built with the React framework, featuring a user-friendly 
-                    design, and intended as an online plant marketplace.</p>
-                <a href="https://homemage.vercel.app/"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/mooncat.png" alt="Mooncat">
-                <h3>Mooncat</h3>
-                <h5>finished</h5>
-                <p>A practice website using Bootstrap, themed around Ruan Mei’s 
-                    creations care in the RPG game Honkai Star Rail.</p>
-                <a href="https://yuxra.github.io/mooncat/"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/to-do.png" alt="List">
-                <h3>Todo List</h3>
-                <h5>on going</h5>
-                <p>A to-do list website using JavaScript, featuring 
-                    several user-friendly functionalities.</p>
-                <a href="https://to-do-app-iota-blond.vercel.app/"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/kopi-kenangan.png" alt="kopi">
-                <h3>Kopi Kenangan</h3>
-                <h5>finished</h5>
-                <p>A innovation of the Kopi Kenangan website using JavaScript, created by Rasikah, 
-                    <a href="https://kila-aja.github.io/Portofolio/">Priskila,</a> and <a href="https://alexandria-laufie.framer.website/">Lovi</a> for the PlayIT web design competition.</p>
-                <a href="https://bundajongho.github.io/kopikenangan-gacor/index.html"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/foxnrock.png" alt="Fox">
-                <h3>Fox n Rock</h3>
-                <h5>finished</h5>
-                <p>A simple game I created using JavaScript, where players must avoid randomly 
-                    falling rocks from the sky.</p>
-                <a href="https://yuxra.github.io/fox-n-rock/"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/cuaca-blimbing.png" alt="Cuaca">
-                <h3>Malang Weather</h3>
-                <h5>on going</h5>
-                <p>A weather forecast website utilizing an API for data, covering the weather 
-                    forecast for the Blimbing area, Malang.</p>
-                <a href="https://yuxra.github.io/cuaca_malang/"><button>view</button></a>
-            </div>
-
-            <div class="card">
-                <img src="img/clipsy.png" alt="Clipsy">
-                <h3>Clipsy</h3>
-                <h5>on going</h5>
-                <p>A video streaming app project built using the Flutter framework, 
-                    inspired by YouTube’s interface.</p>
-                <!-- <a href="https://clipsy-web-mu.vercel.app/"><button>view</button></a> -->
-                <a href="assets/Clipsy.apk" download><button>view</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div id="experience">
-        <h1>Experience</h1>
-    
-        <div class="exp">
-            <div class="image-container">
-                <img src="img/rakryan.jpg" alt="">
-                <div class="overlay">
-                    <p>Rakryan Industrial Class is a program that provides learning resources for full-stack developers, covering everything
-                         from basic front-end technologies like CSS and Bootstrap to back-end development. It helps participants build a 
-                         solid foundation in web development and gain hands-on experience through real-world projects.</p>
+            <div class="exp">
+                <div class="image-container">
+                    <img src="img/rakryan.jpg" alt="">
+                    <div class="overlay">
+                        <p>Rakryan Industrial Class is a program that provides learning resources for full-stack
+                            developers, covering everything
+                            from basic front-end technologies like CSS and Bootstrap to back-end development. It helps
+                            participants build a
+                            solid foundation in web development and gain hands-on experience through real-world
+                            projects.</p>
+                    </div>
                 </div>
+                <h2>Rakryan Industrial Class</h2>
             </div>
-            <h2>Rakryan Industrial Class</h2>
-        </div>
-    
-        <div class="exp">
-            <div class="image-container">
-                <img src="img/playIT.jpg" alt="">
-                <div class="overlay">
-                    <p>Participated in a web development competition organized by Polinema as part of a three-member team. Our focus was 
-                        on creating an engaging and user-friendly website using HTML, CSS, and JavaScript. We took inspiration from the 
-                        website of an Indonesian MSME, Kopi Kenangan, to design an aesthetically appealing and functional web experience.</p>
-                </div>
-            </div>
-            <h2>Web Development PlayIT</h2>
-        </div>
-    
-        <div class="exp">
-            <div class="image-container">
-                <img src="img/clipsy.png" alt="">
-                <div class="overlay">
-                    <p>Utilizing Flutter and Flutterviz to ensure a seamless and consistent user experience across a wide range 
-                        of devices. By leveraging Flutter's powerful framework, applications can be developed with highly responsive 
-                        interfaces, smooth animations, and optimized performance. This approach enables the creation of visually 
-                        appealing and high-performing applications that adapt effortlessly to different screen sizes and platforms.</p>
-                </div>
-            </div>
-            <h2>Flutter Application</h2>
-        </div>
-    </div>
-    <div class="background-blur3"></div>
 
-    
+            <div class="exp">
+                <div class="image-container">
+                    <img src="img/playIT.jpg" alt="">
+                    <div class="overlay">
+                        <p>Participated in a web development competition organized by Polinema as part of a three-member
+                            team. Our focus was
+                            on creating an engaging and user-friendly website using HTML, CSS, and JavaScript. We took
+                            inspiration from the
+                            website of an Indonesian MSME, Kopi Kenangan, to design an aesthetically appealing and
+                            functional web experience.</p>
+                    </div>
+                </div>
+                <h2>Web Development PlayIT</h2>
+            </div>
 
-    <div id="contact">
-        <h1>Contact Me</h1> <!-- Tetap di tengah, tanpa aneh-aneh -->
-    
-        <div class="contact-info">
-            <div class="logo">
-                <i class="fa-solid fa-envelope"></i>
+            <div class="exp">
+                <div class="image-container">
+                    <img src="img/clipsy.png" alt="">
+                    <div class="overlay">
+                        <p>Utilizing Flutter and Flutterviz to ensure a seamless and consistent user experience across a
+                            wide range
+                            of devices. By leveraging Flutter's powerful framework, applications can be developed with
+                            highly responsive
+                            interfaces, smooth animations, and optimized performance. This approach enables the creation
+                            of visually
+                            appealing and high-performing applications that adapt effortlessly to different screen sizes
+                            and platforms.</p>
+                    </div>
+                </div>
+                <h2>Flutter Application</h2>
+            </div>
+        </div>
+        <div class="background-blur3"></div>
+
+
+
+        <div id="contact">
+            <h1>Contact Me</h1>
+
+            <div class="contact-info">
+                <div class="logo">
+                    <i class="fa-solid fa-envelope"></i>
                     <a href="mailto:rasikahrasikah3@gmail.com">
                         <p>rasikahrasikah3@gmail.com</p>
                     </a>
-            </div>
-    
-            <div class="logo">
-                <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div class="logo">
+                    <i class="fa-brands fa-whatsapp"></i>
                     <a href="https://wa.link/jf40hj">
                         <p>+62 813-6489-6645</p>
                     </a>
-            </div>
-    
-            <div class="logo">
-                <i class="fa-brands fa-github"></i>
+                </div>
+
+                <div class="logo">
+                    <i class="fa-brands fa-github"></i>
                     <a href="https://github.com/yuxra">
                         <p>yuxra</p>
                     </a>
-            </div>
-    
-            <div class="logo">
-                <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="logo">
+                    <i class="fa-brands fa-instagram"></i>
                     <a href="https://www.instagram.com/yur.rass?igsh=MWU4azJqN2J1bml3cg==">
                         <p>@yur.rass</p>
                     </a>
+                </div>
             </div>
-        </div>
-        <div class="background-blur4"></div>
+            <div class="background-blur4"></div>
 
-        <span class="material-icons support-icon">support_agent</span>
+            <span class="material-icons support-icon">support_agent</span>
+        </div>
+
     </div>
 
 
-                
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
