@@ -1,4 +1,4 @@
-// scroll
+// Scroll to section on anchor click
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -15,50 +15,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-
-
+// Toggle menu animation (show/hide)
 function toggleMenu() {
     const nav = document.querySelector(".nav-links");
     const toggle = document.querySelector(".menu-toggle");
 
     if (nav.classList.contains("active")) {
-        // Tambahkan efek fade-out sebelum menghilangkan menu
         nav.classList.add("fade-out");
         setTimeout(() => {
             nav.classList.remove("active", "fade-out");
-        }, 400); // Sesuai dengan durasi animasi fadeOut di CSS (0.4s)
+        }, 400);
     } else {
-        // Tampilkan menu dan animasi fade-in
         nav.classList.add("active");
     }
 
-    // Animasi tombol toggle
     toggle.classList.toggle("active");
 }
 
+// Navbar scroll effect (add/remove class on scroll)
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) { // Jika scroll lebih dari 50px
+    if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 });
 
+// Adjust body padding for fixed navbar
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
     const body = document.querySelector("body");
 
-    let navbarHeight = navbar.offsetHeight; // Ambil tinggi navbar
-    body.style.paddingTop = navbarHeight + "px"; // Tambahkan padding setinggi navbar
+    let navbarHeight = navbar.offsetHeight;
+    body.style.paddingTop = navbarHeight + "px";
 });
 
-
-
+// Text slide animation
 const textSlide = document.querySelector('.text-slide');
 const texts = document.querySelectorAll('.text-slide p');
-const textHeight = 50; // Sesuaikan dengan tinggi teks
+const textHeight = 50;
 let index = 0;
 
 function scrollText() {
@@ -66,29 +62,26 @@ function scrollText() {
     textSlide.style.transition = 'transform 1s ease-in-out';
     textSlide.style.transform = `translateY(-${index * 81}px)`;
 
-    // Jika sampai teks duplikasi, reset posisinya diam-diam
     if (index === texts.length - 1) {
         setTimeout(() => {
-            textSlide.style.transition = 'none'; // Matikan transisi
-            textSlide.style.transform = `translateY(0)`; // Kembali ke awal
+            textSlide.style.transition = 'none';
+            textSlide.style.transform = `translateY(0)`;
             index = 0;
-        }, 1000); // Tunggu 1 detik sebelum reset agar tak terlihat
+        }, 1000);
     }
 
-    setTimeout(scrollText, 2000); // Jeda sebelum teks berikutnya muncul
+    setTimeout(scrollText, 2000);
 }
 
-// Jalankan animasi pertama kali
 setTimeout(scrollText, 2000);
 
-
-
+// Highlight current section in navbar (update active link and underline)
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = [document.body, ...document.querySelectorAll("div[id]")]; // Tambah body sebagai 'home'
+    const sections = [document.body, ...document.querySelectorAll("div[id]")];
     const navLinks = document.querySelectorAll("nav ul li a");
     const navUnderline = document.querySelector(".nav-underline");
 
-    let lastActiveLink = document.querySelector('nav ul li a[href="#home"]'); // Default di Home
+    let lastActiveLink = document.querySelector('nav ul li a[href="#home"]');
 
     function updateUnderline(link) {
         if (!link) return;
@@ -101,12 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function highlightCurrentSection() {
-        let currentActive = lastActiveLink; // Default tetap pakai yang terakhir aktif
+        let currentActive = lastActiveLink;
         let windowHeight = window.innerHeight;
 
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
-            const threshold = windowHeight * 0.3; // Harus lebih dari 30% terlihat
+            const threshold = windowHeight * 0.3;
 
             if (rect.top < threshold && rect.bottom > threshold) {
                 const sectionId = section === document.body ? "home" : section.id;
@@ -126,11 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Pas awal, underline langsung di Home
     lastActiveLink.classList.add("active");
     updateUnderline(lastActiveLink);
 
-    // Update underline saat klik menu
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
             navLinks.forEach(l => l.classList.remove("active"));
@@ -140,16 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Update underline saat scroll
     window.addEventListener("scroll", highlightCurrentSection);
-
-    // Update posisi underline saat resize
     window.addEventListener("resize", () => updateUnderline(lastActiveLink));
 });
 
-
-
-
+// Section visibility animation on scroll
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("div[id]");
 
@@ -158,35 +144,56 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
             } else {
-                entry.target.classList.remove("show"); // Biar efeknya bisa muncul lagi kalau discroll
+                entry.target.classList.remove("show");
             }
         });
-    }, { threshold: 0.2 }); // 0.2 artinya efek muncul saat 20% dari elemen terlihat
+    }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
 });
 
-
-
-
-
+// Open external links in a new tab
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll("a");
 
     links.forEach(link => {
         if (link.hostname !== window.location.hostname) {
             link.setAttribute("target", "_blank");
-            link.setAttribute("rel", "noopener noreferrer"); // Biar lebih aman
+            link.setAttribute("rel", "noopener noreferrer");
         }
     });
 });
 
+// Loading screen progress bar and animation
+window.addEventListener("load", function () {
+    let progressBar = document.getElementById("progress");
+    let loadingScreen = document.getElementById("loadingScreen");
+    let flower = document.getElementById("flower");
+    let mainContent = document.getElementById("mainContent");
 
+    let loadingDuration = 4;
+    let progress = 0;
 
+    progressBar.style.width = '0%';
 
+    let loadingInterval = setInterval(() => {
+        progress += 100 / (loadingDuration * 10);
+        progressBar.style.width = `${progress}%`;
 
+        if (progress >= 100) {
+            clearInterval(loadingInterval);
+            flower.style.animation = "none";
 
+            setTimeout(() => {
+                loadingScreen.style.transform = "translateY(-100%)";
+                loadingScreen.style.transition = "transform 1s ease-out";
+            }, 50);
 
-
-
-
+            setTimeout(() => {
+                loadingScreen.style.display = "none";
+                mainContent.style.visibility = "visible";
+                mainContent.style.opacity = 1;
+            }, 1200);
+        }
+    }, 100);
+});
