@@ -868,6 +868,10 @@ a {
     font-size: 18px;
 }
 
+.logo p:hover {
+    font-weight: bold;
+}
+
 .support-icon {
     font-size: 1600% !important; 
     color: #FCFAEE;
